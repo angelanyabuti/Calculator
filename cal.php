@@ -18,6 +18,12 @@
 		<th><input type="button" name="pm" id="pm" value="&plusmn" onClick='addPlusMinus();'></th>
 	</tr>
 	<tr>
+		<th><input type="button" name="sv" id="sv" value="4" onClick='addFour();'></th>
+		<th><input type="button" name="et" id="et" value="5" onClick='addFive();'></th>
+		<th><input type="button" name="nn" id="nn" value="6" onClick='addSix();'></th>
+		<th><input type="button" name="dvd" id="dvd" value="&divide" ></th>
+	</tr>
+	<tr>
 		<th><input type="button" name="sv" id="sv" value="7" onClick='addSeven();'></th>
 		<th><input type="button" name="et" id="et" value="8" onClick='addEight();'></th>
 		<th><input type="button" name="nn" id="nn" value="9" onClick='addNine();'></th>
