@@ -3,6 +3,38 @@
 <head>
 <script>
 	// A function to get seven into the textfield
+	var cvalue;
+	//calc Funtions
+	function calcClear()
+	{
+
+		document.getElementById('inpt').value="";
+	}
+	function calcBksp()
+	{
+		var cvalue=document.getElementById('inpt').value;
+		lvalue=cvalue.substring(0,cvalue.length-1);
+		//alert(lvalue);
+		document.getElementById('inpt').value=lvalue;
+	}
+	function addPlusMinus()
+	{
+		var cvalue=document.getElementById('inpt').value;
+		var sign=cvalue.substr(0,1);
+		var nval=cvalue.substr(1);
+		//alert(sign);
+		//alert(nval);
+
+		if (sign=="+")
+			cvalue="-"+nval;
+		else
+			if (sign=="-")
+				cvalue="+"+nval;
+			else
+				cvalue="+"+cvalue;
+
+			document.getElementById('inpt').value=cvalue;
+	} 
 </script>
 </head>
 <body>
