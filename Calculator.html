@@ -46,6 +46,7 @@ function dis(val)
 
 			document.getElementById('inpt').value=cvalue;
 	} 
+	//operators Functions
 	function addMinus(){
 
 	}
@@ -58,6 +59,8 @@ function dis(val)
 		document.getElementById('inpt').value=cvalue;
 		//alert(cvalue);
 
+	}
+	//Operand Functions
 	function addOne(){
 		var svalue=document.getElementById('inpt').value;
 		cvalue=svalue+document.getElementById('one').value;
@@ -104,6 +107,7 @@ function dis(val)
 		document.getElementById('inpt').value=cvalue;
 
 	}
+
 </script>
 </head>
 <body>
@@ -124,27 +128,30 @@ function dis(val)
 		<th><input type="button" name="two" id="two" value="2" onClick='addTwo();'></th>
 		<th><input type="button" name="thr" id="thr" value="3" onClick='addThree();'></th>
 		<th><input type="button" name="minus" id="minus" value="-" onclick="dis('-')"></th>
+
 	</tr>
 	<tr>
 		<th><input type="button" name="fr" id="fr" value="4" onClick='addFour();'></th>
 		<th><input type="button" name="fv" id="fv" value="5" onClick='addFive();'></th>
-		<th><input type="button" name="sx" id="sx" value="6" onClick='addSix();'></th>
+		<th><input type="button" name="sx" id="sx" value="6" onClick='addSix();'></th>		
 		<th><input type="button" name="dvd" id="dvd" value="&divide" onclick="dis('/')"></th>
+
 	</tr>
 	<tr>
 		<th><input type="button" name="sv" id="sv" value="7" onClick='addSeven();'></th>
 		<th><input type="button" name="et" id="et" value="8" onClick='addEight();'></th>
-		<th><input type="button" name="nn" id="nn" value="9" onClick='addNine();'></th>
+		<th><input type="button" name="nn" id="nn" value="9" onClick='addNine();'></th>		
 			<td><input type="button" value="&times" onclick="dis('*')"/> </td>
+
 	</tr>
-	<tr>
+<tr>
 		<th><input type="button" name=" " id=" " value=" " onClick="dis(' ')"></th>
 		<th><input type="button" name="zr" id="zr" value="0" onClick="dis('0')"></th>
 		<th><input type="button" name="." id="." value="." onClick="dis('.')"></th>
 		<th><input type="button" name="eql" id="eql" value="=" onclick="solve()"></th>
 
 	</tr>
-	
+
 </form>	
 </table>
 </body>
