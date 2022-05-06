@@ -1,0 +1,159 @@
+<!DOCTYPE html >
+<html >
+<head>
+	<title>Calculator</title>
+
+<script>
+	// A function to get seven into the textfield
+	var cvalue;
+	//calc Funtions
+	function calcClear()
+	{
+
+		document.getElementById('inpt').value="";
+	}
+	function solve()
+{
+
+			let x = document.getElementById("inpt").value
+			let y = eval(x)
+			document.getElementById("inpt").value = y
+}
+function dis(val)
+		{
+			document.getElementById("inpt").value+=val
+		}
+	function calcBksp()
+	{
+		var cvalue=document.getElementById('inpt').value;
+		lvalue=cvalue.substring(0,cvalue.length-1);
+		//alert(lvalue);
+		document.getElementById('inpt').value=lvalue;
+	}
+	function addPlusMinus()
+	{
+		var cvalue=document.getElementById('inpt').value;
+		var sign=cvalue.substr(0,1);
+		var nval=cvalue.substr(1);
+		//alert(sign);
+		//alert(nval);
+
+		if (sign=="+")
+			cvalue="-"+nval;
+		else
+			if (sign=="-")
+				cvalue="+"+nval;
+			else
+				cvalue="+"+cvalue;
+
+			document.getElementById('inpt').value=cvalue;
+	} 
+	//operators Functions
+	function addMinus(){
+
+	}
+	function addPlus(){
+
+	}
+	function addEqual(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+"=";
+		document.getElementById('inpt').value=cvalue;
+		//alert(cvalue);
+
+	}
+	//Operand Functions
+	function addOne(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('one').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addTwo(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('two').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addThree(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('thr').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addFour(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('fr').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addFive(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('fv').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addSix(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('sx').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addSeven(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('sv').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addEight(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('et').value;
+		document.getElementById('inpt').value=cvalue;
+	}
+	function addNine(){
+		var svalue=document.getElementById('inpt').value;
+		cvalue=svalue+document.getElementById('nn').value;
+		document.getElementById('inpt').value=cvalue;
+
+	}
+
+</script>
+</head>
+<body>
+<table border="1">
+<form name="calc" id="calc" style="width: 100%">
+	<tr style="font-size: 16px;background: darkblue;color: white"><th colspan="5">Calculator</th></tr>
+	<tr style="font-size: 14px;background: grey;color: white"><th>Calculator</th></tr>
+	<tr><th colspan="4"><input type="text" name="inpt" id="inpt" style="width: 95%"></th></tr>
+	<tr>
+		<th><input type="button" name="bksp" id="bksp" value="Bksp" onClick='calcBksp();'></th>
+		<th><input type="button" name="ce" id="ce" value="CE" ></th>
+		<th><input type="button" name="clr" id="clr" value="clr"  onClick='calcClear();'></th>
+		<th><input type="button" name="plus" id="plus" value="+" onclick="dis('+')"></th>
+
+	</tr>
+	<tr>
+		<th><input type="button" name="one" id="one" value="1" onClick='addOne();'></th>
+		<th><input type="button" name="two" id="two" value="2" onClick='addTwo();'></th>
+		<th><input type="button" name="thr" id="thr" value="3" onClick='addThree();'></th>
+		<th><input type="button" name="minus" id="minus" value="-" onclick="dis('-')"></th>
+
+	</tr>
+	<tr>
+		<th><input type="button" name="fr" id="fr" value="4" onClick='addFour();'></th>
+		<th><input type="button" name="fv" id="fv" value="5" onClick='addFive();'></th>
+		<th><input type="button" name="sx" id="sx" value="6" onClick='addSix();'></th>		
+		<th><input type="button" name="dvd" id="dvd" value="&divide" onclick="dis('/')"></th>
+
+	</tr>
+	<tr>
+		<th><input type="button" name="sv" id="sv" value="7" onClick='addSeven();'></th>
+		<th><input type="button" name="et" id="et" value="8" onClick='addEight();'></th>
+		<th><input type="button" name="nn" id="nn" value="9" onClick='addNine();'></th>		
+			<td><input type="button" value="&times" onclick="dis('*')"/> </td>
+
+	</tr>
+<tr>
+		<th><input type="button" name=" " id=" " value=" " onClick="dis(' ')"></th>
+		<th><input type="button" name="zr" id="zr" value="0" onClick="dis('0')"></th>
+		<th><input type="button" name="." id="." value="." onClick="dis('.')"></th>
+		<th><input type="button" name="eql" id="eql" value="=" onclick="solve()"></th>
+
+	</tr>
+
+</form>	
+</table>
+</body>
