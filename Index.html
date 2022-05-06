@@ -7,11 +7,14 @@
 <script>
 	var cvalue;
 	//calc Funtions
+	//This function is called when you click the 'clr' button
 	function calcClear()
 	{
 
 		document.getElementById('inpt').value="";
 	}
+
+	//This method is called when we click the'=' operator. Variable x accepts the expression provided by the user. it is evaluated and stored in variable y
 	function solve()
 {
 
@@ -19,6 +22,8 @@
 			let y = eval(x)
 			document.getElementById("inpt").value = y
 }
+
+//This function accepts the values clicked as a parameter and returns the same to the textbox
 function dis(val)
 		{
 			document.getElementById("inpt").value+=val
@@ -30,6 +35,8 @@ function dis(val)
 		//alert(lvalue);
 		document.getElementById('inpt').value=lvalue;
 	}
+		//operators Functions
+
 	function addPlusMinus()
 	{
 		var cvalue=document.getElementById('inpt').value;
@@ -48,13 +55,7 @@ function dis(val)
 
 			document.getElementById('inpt').value=cvalue;
 	} 
-	//operators Functions
-	function addMinus(){
-
-	}
-	function addPlus(){
-
-	}
+	
 	function addEqual(){
 		var svalue=document.getElementById('inpt').value;
 		cvalue=svalue+"=";
